@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "IPJIMAYO",
+    "slug": "ipjimayo",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "ipjimayo",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": ["**/*"],
+    "android": {
+      "package": "com.ipjimayo.app",
+      "permissions": [
+        "BLUETOOTH",
+        "BLUETOOTH_ADMIN",
+        "BLUETOOTH_CONNECT",
+        "BLUETOOTH_SCAN",
+        "ACCESS_FINE_LOCATION"
+      ]
+    },
+    "ios": {
+      "bundleIdentifier": "com.ipjimayo.app",
+      "infoPlist": {
+        "NSBluetoothAlwaysUsageDescription": "IPJIMAYO 기기와 블루투스로 연결하기 위해 필요합니다."
+      }
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Pretendard-Regular.otf",
+            "./assets/fonts/Pretendard-Medium.otf",
+            "./assets/fonts/Pretendard-SemiBold.otf",
+            "./assets/fonts/Pretendard-Bold.otf",
+            "./assets/fonts/Pretendard-Black.otf"
+          ]
+        }
+      ],
+      [
+        "react-native-ble-plx",
+        {
+          "isBackgroundEnabled": false,
+          "modes": [],
+          "bluetoothAlwaysPermission": "IPJIMAYO 기기와 블루투스로 연결하기 위해 필요합니다."
+        }
+      ]
+    ]
+  }
+}
